@@ -13,4 +13,8 @@ var binaryTree = require('./BinaryTree');
 //}
 
 //Today is a tree day
-var BinaryTree =
+var BinaryTree = require('./lib/binary-search-tree');
+var tree = new BinaryTree();
+tree.add(5);
+var size = tree.size();
+console.log(size);
