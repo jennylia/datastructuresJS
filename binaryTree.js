@@ -16,18 +16,21 @@ var BinaryNode = function(val){
 BinaryTree.prototype.helloWorld = function helloWorld(val){
     return "hello word " + val;
 }
-BinaryTree.prototype.insert = function(val){
+BinaryTree.prototype.insert = function(tree, val){
     var node = new BinaryNode(val);
 
-    if (this.root == null){
-        this.node == node;
+    if (tree.root == null){
+        tree.node == node;
     }else{
-        this.insertNode(node, this.root);
+        //tree.insertNode(node, tree.root);
     }
 };
 
-BinaryTree.prototype.height = function(tree){
-    return 1;
+BinaryTree.prototype.getHeight = function(){
+    if (this.root == null){
+        return 0;
+    }
+    return 1 + Math.max(this.left.getHeight(), this.right.getHeight());
 };
 
 module.exports = BinaryTree;
