@@ -1,3 +1,2 @@
-var binaryTree = require('./binaryTree');
+var binaryTree = require('./BinaryTree');
 
-binaryTree.init();
